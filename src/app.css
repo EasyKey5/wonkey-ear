@@ -1,0 +1,80 @@
+:root {
+  --bg: #07070f;
+  --panel: #11111d;
+  --slot: #10101c;
+  --slot-locked: #0b0b14;
+  --line: #2a2a3f;
+  --text: #eeedf8;
+  --muted: #a0a0bb;
+  --dim: #454560;
+  --cyan: #38e8ff;
+  --magenta: #ff4fd8;
+  --good: #3dffa0;
+  --bad: #ff4d6d;
+  --font-neon: "Tilt Neon", system-ui, sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 50% 30%, #15152a 0%, var(--bg) 65%) fixed;
+  background-color: var(--bg);
+  color: var(--text);
+  font: 16px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.btn {
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    border-color 0.12s,
+    box-shadow 0.12s,
+    background 0.12s;
+}
+
+.btn.primary {
+  border-color: var(--cyan);
+  background: #0c2a33;
+  box-shadow:
+    0 0 18px #38e8ff4d,
+    inset 0 0 12px #38e8ff26;
+  font-family: var(--font-neon);
+  font-size: 18px;
+}
+
+.btn:disabled {
+  border-color: var(--line);
+  color: var(--dim);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .btn:not(:disabled):hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 14px #38e8ff40;
+  }
+}
