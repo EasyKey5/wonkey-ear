@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "check": "svelte-check --tsconfig ./tsconfig.json --fail-on-warnings",
-    "test": "vitest run"
+    "test": "vitest run",
+    "proto:sound": "vite --open /prototype-sound.html"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",
